@@ -1,0 +1,33 @@
+{
+    "version": "2019-05-23",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/universal-ctags/ctags-win32",
+    "checkver": {
+        "url": "https://github.com/universal-ctags/ctags-win32/releases/latest",
+        "re": "(?<version>[\\d]{4}-[\\d]{2}-[\\d]{2})/(?<sha>[\\da-z]{8})"
+    },
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/universal-ctags/ctags-win32/releases/download/2019-05-23%2F3fdf28bc/ctags-2019-05-23_3fdf28bc-x86.zip",
+            "hash": "dbc3ff92d50e41b20eaa3376e28d97b52885d5b10add4251ed079943fe6a0d34"
+        },
+        "64bit": {
+            "url": "https://github.com/universal-ctags/ctags-win32/releases/download/2019-05-23%2F3fdf28bc/ctags-2019-05-23_3fdf28bc-x64.zip",
+            "hash": "77ad60d776df00a37e45dfdb05707489af126352969c03d5ebc72c7efd37bcd0"
+        }
+    },
+    "bin": [
+        "ctags.exe",
+        "readtags.exe"
+    ],
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/universal-ctags/ctags-win32/releases/download/$version%2F$matchSha/ctags-$version_$matchSha-x86.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/universal-ctags/ctags-win32/releases/download/$version%2F$matchSha/ctags-$version_$matchSha-x64.zip"
+            }
+        }
+    }
+}

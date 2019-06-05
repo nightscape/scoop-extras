@@ -1,0 +1,21 @@
+{
+    "homepage": "https://ueli.oliverschwendener.ch",
+    "description": "A keystroke launcher for Windows and macOS.",
+    "version": "7.2.6",
+    "license": "MIT",
+    "url": "https://github.com/oliverschwendener/ueli/releases/download/v7.2.6/ueli-7.2.6-win.zip",
+    "hash": "af724ba4ee4c60a82712fabe768c09063a9a4b16cb1fa0016bc0fed528ca0651",
+    "bin": "ueli.exe",
+    "shortcuts": [
+        [
+            "ueli.exe",
+            "ueli"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/oliverschwendener/ueli"
+    },
+    "autoupdate": {
+        "url": "https://github.com/oliverschwendener/ueli/releases/download/v$version/ueli-$version-win.zip"
+    }
+}

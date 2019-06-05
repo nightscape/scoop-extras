@@ -1,0 +1,46 @@
+{
+    "version": "2019.1.3",
+    "homepage": "https://www.jetbrains.com/webstorm/",
+    "url": "https://download.jetbrains.com/webstorm/WebStorm-2019.1.3.exe#/dl.7z",
+    "hash": "d6116f19880e141a16f7bf78b877de62dafd583ec8f983783f60eab9456d4645",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "bin\\webstorm64.exe",
+                    "webstorm"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "bin\\webstorm64.exe",
+                    "JetBrains WebStorm"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "bin\\webstorm.exe",
+                    "webstorm"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "bin\\webstorm.exe",
+                    "JetBrains WebStorm"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release",
+        "jp": "$..version"
+    },
+    "autoupdate": {
+        "url": "https://download.jetbrains.com/webstorm/WebStorm-$version.exe#/dl.7z",
+        "hash": {
+            "url": "https://download.jetbrains.com/webstorm/WebStorm-$version.exe.sha256"
+        }
+    }
+}

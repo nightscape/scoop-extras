@@ -1,0 +1,39 @@
+{
+    "homepage": "https://www.wireshark.org/",
+    "version": "3.0.2",
+    "url": "https://1.eu.dl.wireshark.org/win32/all-versions/WiresharkPortable_3.0.2.paf.exe#/dl.7z",
+    "hash": "eb43c5f9dcd852e39b91837ccf26b940b89549e210f9d78df15e6ebbdcbc0d9d",
+    "bin": [
+        "App\\Wireshark\\capinfos.exe",
+        "App\\Wireshark\\captype.exe",
+        "App\\Wireshark\\dumpcap.exe",
+        "App\\Wireshark\\editcap.exe",
+        "App\\Wireshark\\mergecap.exe",
+        "App\\Wireshark\\randpkt.exe",
+        "App\\Wireshark\\rawshark.exe",
+        "App\\Wireshark\\reordercap.exe",
+        "App\\Wireshark\\text2pcap.exe",
+        "App\\Wireshark\\tshark.exe",
+        [
+            "WiresharkPortable.exe",
+            "Wireshark"
+        ]
+    ],
+    "persist": "Data",
+    "shortcuts": [
+        [
+            "WiresharkPortable.exe",
+            "Wireshark"
+        ]
+    ],
+    "suggest": {
+        "nmap": "nmap"
+    },
+    "checkver": {
+        "url": "https://www.wireshark.org/update/0/Wireshark/0.0.0/Windows/x86/en-US/stable.xml",
+        "re": "Version ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://1.eu.dl.wireshark.org/win32/all-versions/WiresharkPortable_$version.paf.exe#/dl.7z"
+    }
+}

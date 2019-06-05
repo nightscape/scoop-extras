@@ -1,0 +1,20 @@
+{
+    "version": "3.0.2.2179",
+    "license": "Freeware",
+    "url": "http://app.pc.kakao.com/talk/win32/KakaoTalk_Setup.exe#/dl.7z",
+    "homepage": "https://www.kakao.com/talk",
+    "hash": "bbbd41c03986e0fb9806153682665ce1870753e59666cd3196d70903030a04c5",
+    "shortcuts": [
+        [
+            "KakaoTalk.exe",
+            "KakaoTalk"
+        ]
+    ],
+    "autoupdate": {
+        "url": "http://app.pc.kakao.com/talk/win32/KakaoTalk_Setup.exe#/dl.7z"
+    },
+    "checkver": {
+        "url": "http://app.pc.kakao.com/talk/win32/patch/patch.txt",
+        "re": "kakaotalk_([\\d.]+)_full.pak"
+    }
+}

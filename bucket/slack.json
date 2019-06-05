@@ -1,0 +1,41 @@
+{
+    "homepage": "https://slack.com/downloads/windows",
+    "version": "3.4.2",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.slack-edge.com/releases_x64/slack-3.4.2-full.nupkg",
+            "hash": "b0e7706719e3278f3c53ed123eab03b4686a90c263758bf7a100eb9b5206b3f5"
+        },
+        "32bit": {
+            "url": "https://downloads.slack-edge.com/releases/slack-3.4.2-full.nupkg",
+            "hash": "4570467ceb189fa09167e53efac9f84df2a6458e3aedee5fdcf8d6c2d818b48f"
+        }
+    },
+    "extract_dir": "lib\\net45",
+    "bin": "slack.exe",
+    "shortcuts": [
+        [
+            "slack.exe",
+            "Slack"
+        ]
+    ],
+    "checkver": {
+        "url": "https://downloads.slack-edge.com/releases_x64/RELEASES",
+        "re": "slack-([\\d.]+)-full.nupkg",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.slack-edge.com/releases_x64/slack-$version-full.nupkg"
+            },
+            "32bit": {
+                "url": "https://downloads.slack-edge.com/releases/slack-$version-full.nupkg"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/RELEASES"
+        }
+    }
+}

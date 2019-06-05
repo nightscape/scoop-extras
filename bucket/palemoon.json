@@ -1,0 +1,42 @@
+{
+    "description": "Pale Moon is an Open Source, Mozilla-derived web browser available for Microsoft Windows and Linux, focusing on efficiency and ease of use",
+    "homepage": "https://www.palemoon.org/",
+    "version": "28.5.1",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "http://rm-eu.palemoon.org/release/palemoon-28.5.1.win64.zip",
+            "hash": "778b8931bd78addf9d4a251df9c033a0f59a7eefa98eb90172837924dd116981"
+        },
+        "32bit": {
+            "url": "http://rm-eu.palemoon.org/release/palemoon-28.5.1.win32.zip",
+            "hash": "8befcedead78b92142d87eb60434008fbab6523e56229005f63c0209e8dd29d8"
+        }
+    },
+    "bin": "palemoon.exe",
+    "shortcuts": [
+        [
+            "palemoon.exe",
+            "Pale Moon"
+        ]
+    ],
+    "extract_dir": "palemoon",
+    "checkver": {
+        "url": "https://www.palemoon.org/download.shtml",
+        "re": "Hashes for release ([\\d\\.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://rm-eu.palemoon.org/release/palemoon-$version.win64.zip"
+            },
+            "32bit": {
+                "url": "http://rm-eu.palemoon.org/release/palemoon-$version.win32.zip"
+            }
+        },
+        "hash": {
+            "url": "https://www.palemoon.org/download.shtml",
+            "find": "$basename\\s+([a-fA-F\\d]{64})"
+        }
+    }
+}

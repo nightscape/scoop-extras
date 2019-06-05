@@ -1,0 +1,38 @@
+{
+    "homepage": "https://www.2brightsparks.com/syncback/sbpro.html",
+    "description": "Tool for backing up and synchronizing files to several resources, including an internal or external drive, to different media (USB thumb drive, CD, DVD), to a remote server (NAS, FTP, Windows server) and to a cloud storage provider.",
+    "license": "Shareware",
+    "version": "9.0.1.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.2brightsparks.com/assets/software/SyncBackPro64_Setup_NI.zip#/SyncBackPro_9.0.1.1_x64.zip",
+            "hash": "44f8331c1d5e71dd226c81ad8b431d9f60497aaab2b67797c471d29f5d62eb3e"
+        },
+        "32bit": {
+            "url": "https://www.2brightsparks.com/assets/software/SyncBackPro_Setup_NI.zip#/SyncBackPro_9.0.1.1_x86.zip",
+            "hash": "cf53730e198bc8758ae7a033f3bc4f073854e7b436089b39d044fb353a6ab393"
+        }
+    },
+    "persist": "settings",
+    "shortcuts": [
+        [
+            "SyncBackPro.exe",
+            "SyncBackPro"
+        ]
+    ],
+    "post_install": "\"[Settings]`r`nFolder=%THISPATH%settings`r`nRestricted=1\" | Out-File -Encoding ASCII \"$dir\\SettingsFolder.ini\"",
+    "checkver": {
+        "url": "https://www.2brightsparks.com/syncback/sbpro.html",
+        "re": "SyncBackPro\\s+V([\\d\\.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.2brightsparks.com/assets/software/SyncBackPro64_Setup_NI.zip#/SyncBackPro_$version_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.2brightsparks.com/assets/software/SyncBackPro_Setup_NI.zip#/SyncBackPro_$version_x86.zip"
+            }
+        }
+    }
+}

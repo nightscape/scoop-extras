@@ -1,0 +1,25 @@
+{
+    "homepage": "https://signal.org/",
+    "license": "GPL-3.0-only",
+    "version": "1.25.1",
+    "hash": "5674701fe7e60bbb14c6292f3900a0294824217ec4968e75cfe26316791417fd",
+    "url": "https://updates.signal.org/desktop/signal-desktop-win-1.25.1.exe#/dl.7z",
+    "checkver": {
+        "url": "https://updates.signal.org/desktop/latest.yml",
+        "re": "version:\\s([\\d.]+)"
+    },
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+    "shortcuts": [
+        [
+            "signal.exe",
+            "Signal"
+        ]
+    ],
+    "autoupdate": {
+        "url": "https://updates.signal.org/desktop/signal-desktop-win-$version.exe#/dl.7z",
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "find": "sha2:\\s([a-fA-F0-9]{64})"
+        }
+    }
+}

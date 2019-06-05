@@ -1,0 +1,36 @@
+{
+    "version": "6.0.53",
+    "homepage": "http://www.fon.hum.uva.nl/praat/",
+    "description": "A free cross-platform software for the scientific analysis of speech in phonetics",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "http://www.fon.hum.uva.nl/praat/praat6053_win64.zip",
+            "hash": "6db9930e65a2f48ff1e0bb96f144b71c8da9f8fae4cb41bd7fc84071535c9ae7"
+        },
+        "32bit": {
+            "url": "http://www.fon.hum.uva.nl/praat/praat6053_win32.zip",
+            "hash": "fab2af98a391f1757d8cd0ecb4cbe5152863e384ce827663d4641574735d528e"
+        }
+    },
+    "bin": "Praat.exe",
+    "shortcuts": [
+        [
+            "Praat.exe",
+            "Praat"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/praat/praat"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://www.fon.hum.uva.nl/praat/praat$cleanVersion_win64.zip"
+            },
+            "32bit": {
+                "url": "http://www.fon.hum.uva.nl/praat/praat$cleanVersion_win32.zip"
+            }
+        }
+    }
+}

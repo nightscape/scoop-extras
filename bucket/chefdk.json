@@ -1,0 +1,45 @@
+{
+    "homepage": "https://chef.io",
+    "version": "4.0.60",
+    "description": "Chef Development Kit contains all the tools you need to develop and test your infrastructure, built by the awesome Chef community.",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://packages.chef.io/files/stable/chefdk/4.0.60/windows/2012r2/chefdk-4.0.60-1-x64.msi",
+            "hash": "80d3a65ad9b681b7125b8aed3696a222a782ccceac8284097ba6366c4ef978ab"
+        },
+        "32bit": {
+            "url": "https://packages.chef.io/files/stable/chefdk/4.0.60/windows/2012r2/chefdk-4.0.60-1-x86.msi",
+            "hash": "09a423bbf690af7abaa08d5a1dddd38bc399316e8506e6734e1e91a8d959677c"
+        }
+    },
+    "extract_dir": "opscode",
+    "env_set": {
+        "CHEFDK_HOME": "$env:USERPROFILE\\.chefdk",
+        "CHEFDK_ENV_FIX": "1"
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\chefdk.zip\" \"$dir\"",
+            "Remove-Item \"$dir\\chefdk.zip\""
+        ]
+    },
+    "env_add_path": "bin",
+    "checkver": {
+        "url": "https://downloads.chef.io/chefdk/stable",
+        "re": "Chef Development Kit\\D*([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://packages.chef.io/files/stable/chefdk/$version/windows/2012r2/chefdk-$version-1-x64.msi"
+            },
+            "32bit": {
+                "url": "https://packages.chef.io/files/stable/chefdk/$version/windows/2012r2/chefdk-$version-1-x86.msi"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

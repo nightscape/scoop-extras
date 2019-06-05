@@ -1,0 +1,39 @@
+{
+    "homepage": "https://www.elastic.co/products/kibana",
+    "version": "7.1.1",
+    "url": "https://artifacts.elastic.co/downloads/kibana/kibana-7.1.1-windows-x86_64.zip",
+    "hash": "sha512:8930a4d457d20f3939d9f52c60b1a964fa69276c59fa3ba3a799a8617b755451efb51437f59a589498c6eea19acd3ff650be49c36639ffed21a1e96361a349b1",
+    "extract_dir": "kibana-7.1.1-windows-x86_64",
+    "bin": [
+        [
+            "bin\\kibana.bat",
+            "kibana"
+        ],
+        [
+            "bin\\kibana-plugin.bat",
+            "kibana-plugin"
+        ]
+    ],
+    "persist": [
+        "config",
+        "data",
+        "plugins"
+    ],
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ]
+    },
+    "checkver": {
+        "url": "https://www.elastic.co/downloads/past-releases",
+        "re": "kibana-([\\d.]+)-windows-x86_64.zip"
+    },
+    "autoupdate": {
+        "url": "https://artifacts.elastic.co/downloads/kibana/kibana-$version-windows-x86_64.zip",
+        "extract_dir": "kibana-$version-windows-x86_64",
+        "hash": {
+            "url": "$url.sha512"
+        }
+    }
+}

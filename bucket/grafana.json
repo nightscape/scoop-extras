@@ -3,7 +3,10 @@
     "homepage": "https://grafana.com/",
     "description": "Open platform for analytics and data monitoring",
     "extract_dir": "grafana-6.2.1",
-    "bin": "bin\\grafana-server.exe",
+    "bin": [
+	    "bin\\grafana-server.exe", 
+	    "bin\\grafana-cli.exe"
+    ],
     "persist": [
         "conf",
         "data"

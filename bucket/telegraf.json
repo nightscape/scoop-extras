@@ -1,0 +1,35 @@
+{
+    "version": "1.10.4",
+    "homepage": "https://github.com/influxdata/telegraf",
+    "description": "Telegraf is an agent for collecting, processing, aggregating, and writing metrics.",
+    "bin": "telegraf.exe",
+    "extract_dir": "",
+    "persist": "telegraf.conf",
+    "checkver": {
+        "github": "https://github.com/influxdata/telegraf"
+    },
+    "architecture": {
+        "32bit": {
+            "extract_dir": "telegraf",
+            "url": "https://dl.influxdata.com/telegraf/releases/telegraf-1.10.4_windows_i386.zip",
+            "hash": "f263d22afc777e38d1592a288811ece2aa9e3449a41ec046939ce61dd85b46e8"
+        },
+        "64bit": {
+            "extract_dir": "telegraf",
+            "url": "https://dl.influxdata.com/telegraf/releases/telegraf-1.10.4_windows_amd64.zip",
+            "hash": "038bd8e3bd294a154ec8d4d858813d6bce41527c4b19deba59bb800aa7acda70"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "extract_dir": "telegraf",
+                "url": "https://dl.influxdata.com/telegraf/releases/telegraf-$version_windows_i386.zip"
+            },
+            "64bit": {
+                "extract_dir": "telegraf",
+                "url": "https://dl.influxdata.com/telegraf/releases/telegraf-$version_windows_amd64.zip"
+            }
+        }
+    }
+}

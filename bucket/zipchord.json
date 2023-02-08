@@ -1,0 +1,30 @@
+{
+    "version": "2.1.0",
+    "description": "ZipChord Keyboard is a customizable hybrid keyboard input method that augments regular typing with chorded entry.",
+    "homepage": "https://github.com/psoukie/zipchord",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/psoukie/zipchord/releases/download/2.1.0/zipchord-exe-2.1.0.zip",
+    "hash": "a8947d4615a0096f34ee0d76cd4282071223d3ce5886b2d36dea7943056583c9",
+    "persist": "config",
+    "post_install": [
+        "$tmp = New-TemporaryFile | ForEach-Object { Remove-Item $_; mkdir $_ }",
+        "Invoke-WebRequest -OutFile $tmp\\code.zip -Uri 'https://github.com/psoukie/zipchord/archive/refs/heads/main.zip'",
+        "Expand-Archive -Path $tmp\\code.zip -DestinationPath $tmp\\code\\ -Force",
+        "New-Item -ItemType Directory -Path $dir\\config\\ -Force",
+        "Move-Item -Path $tmp\\code\\zipchord-main\\dictionaries\\* -Destination $dir\\config\\ -Force",
+        "$tmp | Remove-Item -Force -Recurse"
+    ],
+    "bin": "zipchord.exe",
+    "shortcuts": [
+        [
+            "zipchord.exe",
+            "Zipchord"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/psoukie/zipchord/"
+    },
+    "autoupdate": {
+        "url": "https://github.com/psoukie/zipchord/releases/download/$version/zipchord-exe-$version.zip"
+    }
+}

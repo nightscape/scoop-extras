@@ -1,0 +1,23 @@
+{
+    "version": "0.6.3",
+    "description": "Git Explorer: cross-platform git workflow improvement tool inspired by Magit",
+    "homepage": "https://github.com/Piturnah/gex",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Piturnah/gex/releases/download/v0.6.3/gex-x86_64-pc-windows-msvc.zip",
+            "hash": "f0d89177a2e87213a493a973e4b801e796e88b50ff8d92c15f40ef9e7db34473"
+        }
+    },
+    "bin": "gex.exe",
+    "checkver": {
+        "github": "https://github.com/Piturnah/gex"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Piturnah/gex/releases/download/v$version/gex-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

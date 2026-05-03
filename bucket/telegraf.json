@@ -1,0 +1,49 @@
+{
+    "version": "1.11.0",
+    "homepage": "https://github.com/influxdata/telegraf",
+    "description": "Telegraf is an agent for collecting, processing, aggregating, and writing metrics.",
+    "bin": "telegraf.exe",
+    "extract_dir": "",
+    "persist": "telegraf.conf",
+    "checkver": {
+        "github": "https://github.com/influxdata/telegraf"
+    },
+    "architecture": {
+        "32bit": {
+            "extract_dir": "telegraf",
+            "url": "https://dl.influxdata.com/telegraf/releases/telegraf-1.11.0_windows_i386.zip",
+            "hash": "1dd5d1b0b693eadb3a6026117b268144790b36545010ebe36473be2a3ee95b81"
+        },
+        "64bit": {
+            "extract_dir": "telegraf",
+            "url": "https://dl.influxdata.com/telegraf/releases/telegraf-1.11.0_windows_amd64.zip",
+            "hash": "674fc96bd657419291b786251f0481f8ad378ae213cbb161f8397f3140500fba"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "extract_dir": "telegraf",
+                "url": "https://dl.influxdata.com/telegraf/releases/telegraf-$version_windows_i386.zip",
+                "hash": {
+                    "url": "https://github.com/influxdata/telegraf/releases/tag/$version",
+                    "find": [
+                        "telegraf-$version_windows_i386.zip</code></a></td>",
+                        "<td><code>([a-fA-F0-9]{64})</code>"
+                    ]
+                }
+            },
+            "64bit": {
+                "extract_dir": "telegraf",
+                "url": "https://dl.influxdata.com/telegraf/releases/telegraf-$version_windows_amd64.zip",
+                "hash": {
+                    "url": "https://github.com/influxdata/telegraf/releases/tag/$version",
+                    "find": [
+                        "telegraf-$version_windows_amd64.zip</code></a></td>",
+                        "<td><code>([a-fA-F0-9]{64})</code>"
+                    ]
+                }
+            }
+        }
+    }
+}

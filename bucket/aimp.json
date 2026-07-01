@@ -1,5 +1,5 @@
 {
-    "version": "5.40.2721",
+    "version": "5.40.2722",
     "description": "Audio player",
     "homepage": "https://www.aimp.ru",
     "license": {
@@ -9,11 +9,11 @@
     "architecture": {
         "64bit": {
             "url": "https://www.aimp.ru/?do=download.file&id=31#/dl.zip",
-            "hash": "b2761561bc63e0356d49ab71a289d152171f50ab549eebbbf292131ee41f766c"
+            "hash": "afa86b5e12942c46afc80684aa88bfc4499bc7037c0c2761db5e1a541e662370"
         },
         "32bit": {
             "url": "https://www.aimp.ru/?do=download.file&id=8#/dl.zip",
-            "hash": "1d2f8104220ac31dc99ed0b7f5b5ae91c70234d8f582fe71b08207c5424afb06"
+            "hash": "08682c84b8299cfaac565aa8c8a05ad4d0139b585e09a0cdce681054e928acb2"
         }
     },
     "extract_dir": "AIMP",

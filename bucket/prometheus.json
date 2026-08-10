@@ -1,0 +1,52 @@
+{
+    "version": "2.10.0",
+    "homepage": "https://prometheus.io/",
+    "description": "Power your metrics and alerting with a leading open-source monitoring solution.",
+    "bin": [
+        [
+            "prometheus.exe",
+            "prometheus",
+            "--config.file $persist_dir/prometheus.yml"
+        ],
+        "promtool.exe"
+    ],
+    "persist": [
+        "data",
+        "prometheus.yml"
+    ],
+    "checkver": {
+        "github": "https://github.com/prometheus/prometheus"
+    },
+    "architecture": {
+        "32bit": {
+            "extract_dir": "prometheus-2.10.0.windows-386",
+            "url": "https://github.com/prometheus/prometheus/releases/download/v2.10.0/prometheus-2.10.0.windows-386.tar.gz",
+            "hash": "9fa5bfba6f383b297c96d81e1f09405f233f7e2356349359b96bd785a11cef5e"
+        },
+        "64bit": {
+            "extract_dir": "prometheus-2.10.0.windows-amd64",
+            "url": "https://github.com/prometheus/prometheus/releases/download/v2.10.0/prometheus-2.10.0.windows-amd64.tar.gz",
+            "hash": "eb138082a4d5e4d5b1e3ca838fa508f053474d46bca76e87ab0834f0d8b110db"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "extract_dir": "prometheus-$version.windows-386",
+                "url": "https://github.com/prometheus/prometheus/releases/download/v$version/prometheus-$version.windows-386.tar.gz",
+                "hash": {
+                    "url": "https://github.com/prometheus/prometheus/releases/download/v$version/sha256sums.txt",
+                    "find": "([A-Fa-f\\d]{64}).*prometheus-.*.windows-386.tar.gz"
+                }
+            },
+            "64bit": {
+                "extract_dir": "prometheus-$version.windows-amd64",
+                "url": "https://github.com/prometheus/prometheus/releases/download/v$version/prometheus-$version.windows-amd64.tar.gz",
+                "hash": {
+                    "url": "https://github.com/prometheus/prometheus/releases/download/v$version/sha256sums.txt",
+                    "find": "([A-Fa-f\\d]{64}).*prometheus-.*.windows-amd64.tar.gz"
+                }
+            }
+        }
+    }
+}

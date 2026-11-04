@@ -1,5 +1,5 @@
 {
-    "version": "4.53.276",
+    "version": "4.53.280",
     "description": "Collaboration software",
     "homepage": "https://slack.com",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://downloads.slack-edge.com/desktop-releases/windows/x64/4.53.276/slack-4.53.276-full.nupkg",
-            "hash": "sha1:5df09c276e6abc7a7fa9ca46b47bde1c9d69c687"
+            "url": "https://downloads.slack-edge.com/desktop-releases/windows/x64/4.53.280/slack-4.53.280-full.nupkg",
+            "hash": "sha1:f07145820d22c44ebdc3beab015cde462a6e10d7"
         }
     },
     "extract_dir": "lib\\net45",

@@ -1,13 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "16.0",
+    "version": "16.0.1",
     "description": "A privacy-focused web browser developed in a collaboration between Mullvad VPN and the Tor Project.",
     "homepage": "https://mullvad.net/en/browser",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.mullvad.net/browser/16.0/mullvad-browser-windows-x86_64-16.0.exe#/dl.7z",
-            "hash": "4b60828972ba5dca193ccc5a9fd47af811873c390aa59bc6d7d93ec1eb39b44d"
+            "url": "https://cdn.mullvad.net/browser/16.0.1/mullvad-browser-windows-x86_64-16.0.1.exe#/dl.7z",
+            "hash": "72b997c487b4949e76a98a62ddc585d5a4b297eab6e54a608e36b6fb31c70462"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Browser\\update*\" -Recurse -ErrorAction SilentlyContinue",

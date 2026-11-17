@@ -1,10 +1,10 @@
 {
-    "version": "3.6.2.10",
+    "version": "3.6.3.17",
     "homepage": "https://www.adventuregamestudio.co.uk/",
     "description": "An IDE and the engine meant for creating and running videogames of adventure (aka “quest”) genre.",
     "license": "Artistic-2.0",
-    "url": "https://github.com/adventuregamestudio/ags/releases/download/v3.6.2.10/AGS-3.6.2.10.zip",
-    "hash": "56dec256a8cfe4d6c92f31ae5d7144c0e36976231b052150cafcc4a54b7cae64",
+    "url": "https://github.com/adventuregamestudio/ags/releases/download/v3.6.3.17/AGS-3.6.3.17.zip",
+    "hash": "a47e3f2da489d8980d35e9e7ef59f27d92844136a8eebab93499d31172613f7d",
     "shortcuts": [
         [
             "ags-help.chm",
